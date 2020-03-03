@@ -11,14 +11,17 @@
   ],
   "minimum-stability": "stable",
   "require": {
-    "coffeecode/datalayer": "1.1.*"
+    "coffeecode/datalayer": "1.1.2"
+  },
+  "config": {
+    "vendor-dir": "vendor"
   },
   "autoload": {
     "psr-4": {
-      "Source\\": "src/"
+      "Source\\": "source/"
     },
     "files": [
-      "src/Config.php"
+      "source/Config.php"
     ]
   }
 }

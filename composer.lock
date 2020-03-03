@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9819dbc9a9e055da78c236489692235c",
+    "content-hash": "378c01ec62cdbbce317b016cf8759e5b",
     "packages": [
         {
             "name": "coffeecode/datalayer",
-            "version": "1.1.4",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsonvleite/datalayer.git",
-                "reference": "17fecff8edb8fb5287648875f182acbb80389614"
+                "reference": "928012861d39b855c91485a0f1bd29d202c2fd08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robsonvleite/datalayer/zipball/17fecff8edb8fb5287648875f182acbb80389614",
-                "reference": "17fecff8edb8fb5287648875f182acbb80389614",
+                "url": "https://api.github.com/repos/robsonvleite/datalayer/zipball/928012861d39b855c91485a0f1bd29d202c2fd08",
+                "reference": "928012861d39b855c91485a0f1bd29d202c2fd08",
                 "shasum": ""
             },
             "require": {
@@ -53,7 +53,7 @@
                 "save",
                 "upinside"
             ],
-            "time": "2019-10-29T13:34:17+00:00"
+            "time": "2019-07-08T20:23:49+00:00"
         }
     ],
     "packages-dev": [],

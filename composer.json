@@ -1,0 +1,24 @@
+{
+  "name": "fabio/cohros",
+  "description": "REST API with PHP",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "FabioCruz",
+      "email": "fabinhocosta1202@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "coffeecode/datalayer": "1.1.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Source\\": "src/"
+    },
+    "files": [
+      "src/Config.php"
+    ]
+  }
+}

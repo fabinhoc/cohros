@@ -11,7 +11,8 @@
   ],
   "minimum-stability": "stable",
   "require": {
-    "coffeecode/datalayer": "1.1.2"
+    "coffeecode/datalayer": "1.1.2",
+    "coffeecode/router": "^1.0"
   },
   "config": {
     "vendor-dir": "vendor"

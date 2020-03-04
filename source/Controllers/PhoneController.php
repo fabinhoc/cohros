@@ -2,15 +2,15 @@
 
 namespace Source\Controllers;
 
-use Source\Models\Client;
+use Source\Models\Phone;
 
-class ClientController
+class PhoneController
 {
 	private $model = "";
 
 	public function __construct()
 	{
-		$this->model = new Client();
+		$this->model = new Phone();
 	}
 	public function findAll()
 	{
@@ -20,7 +20,7 @@ class ClientController
 		foreach ($result as $key => $resultItem) {
 			$arr[$key] = $resultItem->data();
 		}
-		// var_dump($arr);
+
 		echo json_encode($arr);
 	}
 
@@ -32,9 +32,8 @@ class ClientController
 
 	public function save($data)
 	{
-		$this->model->Name = $data["Name"];
-		$this->model->Email = $data["Email"];
-		$this->model->Address = isset($data["Address"]) ? $data["Address"] : '';
+		$this->model->Client_id = $data["Client_id"];
+		$this->model->PhoneNumber = $data["PhoneNumber"];
 		$rs = $this->model->save();
 		echo json_encode($rs);
 	}
@@ -43,9 +42,7 @@ class ClientController
 	{
 		$this->model = $this->model->findById($data["id"]);
 
-		$this->model->Name = $data["Name"];
-		$this->model->Email = $data["Email"];
-		$this->model->Address = isset($data["Address"]) ? $data["Address"] : '';
+		$this->model->PhoneNumber = $data["PhoneNumber"];
 		$rs = $this->model->save();
 		echo json_encode($rs);
 	}

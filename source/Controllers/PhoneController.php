@@ -17,8 +17,10 @@ class PhoneController
 		$result = $this->model->find()->fetch(true);
 
 		$arr = [];
-		foreach ($result as $key => $resultItem) {
-			$arr[$key] = $resultItem->data();
+		if ($result) {
+			foreach ($result as $key => $resultItem) {
+				$arr[$key] = $resultItem->data();
+			}
 		}
 
 		echo json_encode($arr);
@@ -52,5 +54,18 @@ class PhoneController
 		$this->model = $this->model->findById($data["id"]);
 		$rs = $this->model->destroy();
 		echo json_encode($rs);
+	}
+
+	public function findByClientId($data)
+	{
+		$result = $this->model->find("Client_id = :Client_id", "Client_id=" . $data["Client_id"])->fetch(true);
+
+		$arr = [];
+		if ($result) {
+			foreach ($result as $key => $resultItem) {
+				$arr[$key] = $resultItem->data();
+			}
+		}
+		echo json_encode($arr);
 	}
 }

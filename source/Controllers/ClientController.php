@@ -17,8 +17,10 @@ class ClientController
 		$result = $this->model->find()->fetch(true);
 
 		$arr = [];
-		foreach ($result as $key => $resultItem) {
-			$arr[$key] = $resultItem->data();
+		if ($result) {
+			foreach ($result as $key => $resultItem) {
+				$arr[$key] = $resultItem->data();
+			}
 		}
 		// var_dump($arr);
 		echo json_encode($arr);

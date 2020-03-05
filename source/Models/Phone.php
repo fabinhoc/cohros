@@ -8,7 +8,7 @@ class Phone extends DataLayer
 {
 	public function __construct()
 	{
-		parent::__construct("phones", ['Client_id', 'PhoneNumber'], 'Id', false);
+		parent::__construct("phones", ['Client_id', 'PhoneNumber'], 'id', false);
 	}
 
 	public function add(Client $client, int $phone): Phone

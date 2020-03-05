@@ -1,4 +1,6 @@
 <?php
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: Authorization, Content-Type,Accept, Origin");
 
 require __DIR__ . "/vendor/autoload.php";
 
@@ -34,13 +36,13 @@ $router->post("/save", "ClientController:save");
 * CLIENTCONTROLLER
 * update
 */
-$router->put("/update/{id}", "ClientController:update");
+$router->post("/update/{id}", "ClientController:update");
 
 /*
 * CLIENTCONTROLLER
 * delete
 */
-$router->delete("/delete/{id}", "ClientController:delete");
+$router->post("/delete/{id}", "ClientController:delete");
 
 /*
 * PhoneController
@@ -65,12 +67,18 @@ $router->post("/save", "PhoneController:save");
 * PhoneController
 * update
 */
-$router->put("/update/{id}", "PhoneController:update");
+$router->post("/update/{id}", "PhoneController:update");
 
 /*
 * PhoneController
 * delete
 */
-$router->delete("/delete/{id}", "PhoneController:delete");
+$router->post("/delete/{id}", "PhoneController:delete");
+
+/*
+* PhoneController
+* findByClientId
+*/
+$router->get("/findByClientId/{Client_id}", "PhoneController:findByClientId");
 
 $router->dispatch();
